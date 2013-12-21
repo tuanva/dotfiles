@@ -3,3 +3,5 @@
 	email = contact@tuanva.co.uk
 [credential]
 	helper = osxkeychain
+[push]
+	default = simple

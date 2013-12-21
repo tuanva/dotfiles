@@ -6,6 +6,9 @@ export PATH
 export CLICOLOR=1
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 
+# UTF-8 input
+LCCTYPE=enUS.UTF-8
+
 source ~/.bash_prompt.new
 
 # http://blog.taylormcgann.com/tag/prompt-color/
