@@ -54,7 +54,6 @@ set shiftwidth=4
 set smarttab			" Use smart tab
 
 set showcmd 			" Show the (partial) command as it’s being typed
-
 set showmatch 
 
 set number				" Enable line numbers
@@ -77,8 +76,7 @@ set autoindent			" Auto indent
 " Save a file as root (,W)
 noremap <leader>W :w !sudo tee % > /dev/null<CR>
 
-" quick save
-nmap <leader>w :w!<cr>
+nmap <leader>w :w!<cr>				" quick save
 
 nnoremap ' `
 
@@ -93,4 +91,5 @@ function! StripWhitespace ()
    call setpos('.', save_cursor)
    call setreg('/', old_query)
 endfunction
+
 noremap <leader>ss :call StripWhitespace ()<CR>
