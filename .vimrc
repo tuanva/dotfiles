@@ -10,20 +10,15 @@ set autoread
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
 set clipboard=unnamed
 
-" Enhance command-line completion
-set wildmenu
+set wildmenu			" Enhance command-line completion
 
-" Allow cursor keys in insert mode
-set esckeys
+set esckeys				" Allow cursor keys in insert mode
 
-" Allow backspace in insert mode
-set backspace=indent,eol,start
+set backspace=indent,eol,start				" Allow backspace in insert mode
 
-" Optimize for fast terminal connections
-set ttyfast
+set ttyfast				" Optimize for fast terminal connections
 
-" Use UTF-8 without BOM
-set encoding=utf-8 nobomb
+set encoding=utf-8 nobomb			" Use UTF-8 without BOM
 
 " Change mapleader
 let mapleader="," 
@@ -38,51 +33,46 @@ set directory=~/.vim/swaps
 if exists("&undodir")
 	set undodir=~/.vim/undo
 endif
-syntax enable
+
 set background=dark
 colorscheme solarized
-" Respect modeline in files
-set modeline
+
+set modeline			" Respect modeline in files
 set modelines=4
+
 map <C-n> :NERDTreeToggle<CR>
-" Highlight current line
-set cursorline
-" Show the filename in the window titlebar
-set title
-" Show the cursor position
-set ruler
+
+set cursorline			" Highlight current line
+set title				" Show the filename in the window titlebar
+
+set ruler				" Show the cursor position
 
 set wildignore+=*.jpg,*.jpeg,*.gif,*.png,*.gif,*.psd,*.o,*.obj,*.min.js
 set tabstop=4 
 set shiftwidth=4
-" Use smart tab
-set smarttab
-" Show the (partial) command as it’s being typed
-set showcmd 
+
+set smarttab			" Use smart tab
+
+set showcmd 			" Show the (partial) command as it’s being typed
 
 set showmatch 
 
-" Enable line numbers
-set number
-" Enable syntax highlighting
-syntax on
-" Highlight searches
-set hlsearch
-" Highlight dynamically as pattern is typed
-set incsearch
-" Ignore case of searches
-set ignorecase
+set number				" Enable line numbers
 
-" Add the g flag to search/replace by default
-set gdefault
+syntax on				" Enable syntax highlighting
+"syntax enable			" ????
 
+set hlsearch			" Highlight searches
+set incsearch			" Highlight dynamically as pattern is typed
+set ignorecase			" Ignore case of searches
+set gdefault			" Add the g flag to search/replace by default
 
-" Always show status line
-set laststatus=2
-" Enable mouse in all modes
-set mouse=a
+set laststatus=2		" Always show status line
+
+set mouse=a				" Enable mouse in all modes
+
 set smartcase 
-set autoindent
+set autoindent			" Auto indent
 
 " Save a file as root (,W)
 noremap <leader>W :w !sudo tee % > /dev/null<CR>
@@ -92,9 +82,8 @@ nmap <leader>w :w!<cr>
 
 nnoremap ' `
 
-"map  clear search highlighting to F3
-nnoremap <F3> :set hlsearch!<CR>
-
+" clear search highlighting by pressing Esc key
+nnoremap <esc> :noh<return><esc>
 
 " Strip trailing whitespace (,ss)
 function! StripWhitespace ()
