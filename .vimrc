@@ -4,20 +4,17 @@ filetype plugin indent on
 
 execute pathogen#infect()
 
-" auto reload the file when external modification fired
-set autoread
+set autoread			" auto reload the file when external modification fired
 
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
 set clipboard=unnamed
 
 set wildmenu			" Enhance command-line completion
-
 set esckeys				" Allow cursor keys in insert mode
 
-set backspace=indent,eol,start				" Allow backspace in insert mode
+set backspace=indent,eol,start		" Allow backspace in insert mode
 
-set ttyfast				" Optimize for fast terminal connections
-
+set ttyfast							" Optimize for fast terminal connections
 set encoding=utf-8 nobomb			" Use UTF-8 without BOM
 
 " Change mapleader
@@ -52,7 +49,6 @@ set tabstop=4
 set shiftwidth=4
 
 set smarttab			" Use smart tab
-
 set showcmd 			" Show the (partial) command as it’s being typed
 set showmatch 
 
@@ -81,7 +77,7 @@ nmap <leader>w :w!<cr>				" quick save
 nnoremap ' `
 
 " clear search highlighting by pressing Esc key
-nnoremap <esc> :noh<return><esc>
+" nnoremap <esc> :noh<return><esc>
 
 " Strip trailing whitespace (,ss)
 function! StripWhitespace ()
