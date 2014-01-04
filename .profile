@@ -1,5 +1,5 @@
 
-PATH=$PATH:/usr/local/bin/git/:/usr/local/mysql/bin:opt/bin:/Users/tuanva/bin
+PATH=/usr/local/bin:/usr/local/mysql/bin:opt/bin:/Users/tuanva/bin:$PATH
 export PATH
 
 # tell ls to be colourful

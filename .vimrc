@@ -1,5 +1,11 @@
 set nocompatible
+
+filetype plugin indent on
+
 execute pathogen#infect()
+
+" auto reload the file when external modification fired
+set autoread
 
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
 set clipboard=unnamed
@@ -9,16 +15,20 @@ set wildmenu
 
 " Allow cursor keys in insert mode
 set esckeys
+
 " Allow backspace in insert mode
 set backspace=indent,eol,start
+
 " Optimize for fast terminal connections
 set ttyfast
-" Add the g flag to search/replace by default
-set gdefault
+
 " Use UTF-8 without BOM
 set encoding=utf-8 nobomb
+
 " Change mapleader
-let mapleader=","" 
+let mapleader="," 
+let g:mapleader =","
+
 " Don’t add empty newlines at the end of files
 set binary
 set noeol
@@ -51,6 +61,7 @@ set smarttab
 set showcmd 
 
 set showmatch 
+
 " Enable line numbers
 set number
 " Enable syntax highlighting
@@ -61,15 +72,29 @@ set hlsearch
 set incsearch
 " Ignore case of searches
 set ignorecase
+
+" Add the g flag to search/replace by default
+set gdefault
+
+
 " Always show status line
 set laststatus=2
 " Enable mouse in all modes
 set mouse=a
 set smartcase 
 set autoindent
+
 " Save a file as root (,W)
 noremap <leader>W :w !sudo tee % > /dev/null<CR>
+
+" quick save
+nmap <leader>w :w!<cr>
+
 nnoremap ' `
+
+"map  clear search highlighting to F3
+nnoremap <F3> :set hlsearch!<CR>
+
 
 " Strip trailing whitespace (,ss)
 function! StripWhitespace ()
@@ -80,6 +105,3 @@ function! StripWhitespace ()
    call setreg('/', old_query)
 endfunction
 noremap <leader>ss :call StripWhitespace ()<CR>
-
-filetype plugin indent on
-syntax on
