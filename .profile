@@ -40,6 +40,9 @@ alias ip2="curl -s http://www.showmyip.com/simple/ | awk '{print $1}'"
 # grep with color
 alias grep='grep --color=auto'
 
+#flush dns in mountain lion
+alias flushdns='sudo killall -HUP mDNSResponder'
+
 #refresh shell
 alias reload='source ~/.profile'
 # Change prompt
